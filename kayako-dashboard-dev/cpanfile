@@ -1,0 +1,18 @@
+requires 'Mojolicious';
+requires 'Mojolicious::Plugin::Webtail';
+requires 'Data::Dumper';
+requires 'Digest::SHA';
+requires 'common::sense';
+requires 'DateTime';
+requires 'DateTime::Format::ISO8601';
+requires 'Storable';
+requires 'Switch';
+requires 'PadWalker';
+requires 'XML::XML2JSON';
+requires 'Data::Compare';
+requires 'MongoDB';
+requires 'Data::Dump';
+requires 'Hash::Diff';
+requires 'Text::Markdown';
+requires 'Kayako::RestAPI';
+

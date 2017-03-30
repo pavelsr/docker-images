@@ -2,16 +2,16 @@
 # pavelsr/alpine-perl-libxml2
 
 # Build and publish:
-# docker build -t pavelsr/alpine-perl-libxml2 .
+# docker build -t pavelsr/alpine-perl-libxml2:1.0.
 # docker login
 # docker push pavelsr/alpine-perl-libxml2
 
-FROM alpine
+FROM alpine:3.5
 
 LABEL maintainer "Pavel Serikov <pavelsr@cpan.org>"
 
 RUN apk update && \ 
     apk add perl perl-dev g++ make wget curl libxml2-dev && \ 
     curl -L https://cpanmin.us | perl - App::cpanminus && \
-      rm -rf /root/.cpanm/* /usr/local/share/man/* \
-      cpanm XML::LibXML
+    rm -rf /root/.cpanm/* /usr/local/share/man/* && \ 
+    cpanm XML::LibXML
