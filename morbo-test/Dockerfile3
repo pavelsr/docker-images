@@ -1,0 +1,8 @@
+# example 3: check with volumes
+
+# docker build -t morbo-test3 -f Dockerfile3 .
+# docker run -v $(pwd):/root/test/ -w /root/test/ -t -P morbo-test3 morbo test.pl
+ 
+FROM perl
+RUN cpanm Mojolicious 
+EXPOSE 3000

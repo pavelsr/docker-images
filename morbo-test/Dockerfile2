@@ -1,0 +1,10 @@
+# example 2: regular perl instead of morbo
+
+# docker build -t morbo-test2 -f Dockerfile2 .
+# docker run -P -t morbo-test2
+
+
+FROM perl
+RUN cpanm Mojolicious 
+EXPOSE 3000
+CMD ["perl", "-MMojolicious::Lite", "-E", "get '/' =>sub { shift->render(text =>'OK!') }; app->start", "daemon"]
